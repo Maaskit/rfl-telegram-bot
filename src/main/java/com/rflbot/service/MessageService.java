@@ -37,8 +37,7 @@ public class MessageService {
         try {
             telegramClient.execute(DeleteMessage.builder()
                     .chatId(callback.getMessage().getChatId().toString())
-                    .messageId(callback.getMessage().getMessageId())
-                    .build());
+                    .messageId(callback.getMessage().getMessageId()).build());
             log.info("Удалено сообщение с кнопкой: chatId={}, messageId={}",
                     callback.getMessage().getChatId(),
                     callback.getMessage().getMessageId());

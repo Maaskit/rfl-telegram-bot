@@ -15,8 +15,7 @@ public class ClaimCommand implements Command {
 
     @Override
     public boolean canHandle(Update update) {
-        return update.hasCallbackQuery() &&
-                "CLAIM".equals(update.getCallbackQuery().getData());
+        return update.hasCallbackQuery() && "CLAIM".equals(update.getCallbackQuery().getData());
 
     }
 

@@ -19,9 +19,7 @@ public class HealthController {
             jdbcTemplate.queryForObject("SELECT 1", Integer.class);
             return ResponseEntity.ok("OK");
         } catch (Exception e) {
-            return ResponseEntity
-                    .status(HttpStatus.SERVICE_UNAVAILABLE)
-                    .body("DB ERROR");
+            return ResponseEntity.status(HttpStatus.SERVICE_UNAVAILABLE).body("DB ERROR");
         }
     }
 }

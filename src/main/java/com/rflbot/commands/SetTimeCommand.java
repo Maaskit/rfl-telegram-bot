@@ -13,8 +13,7 @@ public class SetTimeCommand implements Command {
 
     @Override
     public boolean canHandle(Update update) {
-        return update.hasCallbackQuery() &&
-                "SET_TIME".equals(update.getCallbackQuery().getData());
+        return update.hasCallbackQuery() && "SET_TIME".equals(update.getCallbackQuery().getData());
     }
 
     @Override

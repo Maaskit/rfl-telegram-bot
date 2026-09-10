@@ -14,8 +14,7 @@ public class DisableCommand implements Command {
 
     @Override
     public boolean canHandle(Update update) {
-        return update.hasCallbackQuery() &&
-                "DISABLE".equals(update.getCallbackQuery().getData());
+        return update.hasCallbackQuery() && "DISABLE".equals(update.getCallbackQuery().getData());
     }
 
     @Override
