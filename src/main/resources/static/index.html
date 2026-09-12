@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    >
+
+    <title>RFL Rewards</title>
+
+    <link rel="stylesheet" href="/style.css">
+
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+
+<body>
+
+<div class="app">
+
+    <header class="header">
+        <div>
+            <div class="logo">RFL</div>
+            <div class="subtitle">Rewards</div>
+        </div>
+
+        <div class="header-status">
+            ● ONLINE
+        </div>
+    </header>
+
+
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-text">
+                <div class="small-title">RFL REWARDS</div>
+
+                <h1>
+                    Привет<span id="username"></span>! 👋
+                </h1>
+
+                <p>
+                    Не пропускай ежедневную награду
+                    и сохраняй свою серию.
+                </p>
+            </div>
+
+            <div class="hero-icon">
+                🎁
+            </div>
+
+        </section>
+
+
+        <!-- Награда -->
+
+        <section class="reward-card">
+
+            <div class="card-icon">
+                🎁
+            </div>
+
+            <div class="card-content">
+
+                <div class="card-title">
+                    Сегодняшняя награда
+                </div>
+
+                <div class="card-description" id="rewardStatus">
+                    Ты ещё не забрал сегодняшнюю награду
+                </div>
+
+            </div>
+
+            <button
+                    class="gold-button"
+                    id="claimButton"
+                    onclick="claimReward()"
+            >
+                ЗАБРАТЬ
+            </button>
+
+        </section>
+
+
+        <!-- Серия -->
+
+        <section
+                class="info-card clickable"
+                onclick="showStreak()"
+        >
+
+            <div class="big-icon">
+                🔥
+            </div>
+
+            <div class="info-content">
+
+                <div class="info-title">
+                    Моя серия
+                </div>
+
+                <div class="big-value">
+                    <span id="streak">0</span> дней
+                </div>
+
+                <div class="info-description">
+                    Продолжай каждый день
+                </div>
+
+            </div>
+
+            <div class="arrow">
+                ›
+            </div>
+
+        </section>
+
+
+        <!-- Время -->
+
+        <section
+                class="info-card clickable"
+                onclick="showTimeSettings()"
+        >
+
+            <div class="big-icon">
+                ⏰
+            </div>
+
+            <div class="info-content">
+
+                <div class="info-title">
+                    Время оповещения
+                </div>
+
+                <div class="big-value small-value">
+                    <span id="notificationTime">12:00</span>
+                </div>
+
+                <div class="info-description">
+                    Ежедневное напоминание
+                </div>
+
+            </div>
+
+            <div class="arrow">
+                ›
+            </div>
+
+        </section>
+
+
+        <!-- Уведомления -->
+
+        <section class="info-card">
+
+            <div class="big-icon">
+                🔔
+            </div>
+
+            <div class="info-content">
+
+                <div class="info-title">
+                    Уведомления
+                </div>
+
+                <div class="info-description" id="notificationStatus">
+                    Включены
+                </div>
+
+            </div>
+
+            <label class="switch">
+
+                <input
+                        type="checkbox"
+                        id="notificationSwitch"
+                        checked
+                        onchange="toggleNotifications()"
+                >
+
+                <span class="slider"></span>
+
+            </label>
+
+        </section>
+
+
+        <!-- Две нижние кнопки -->
+
+        <div class="grid">
+
+            <button
+                    class="small-card"
+                    onclick="showInfo()"
+            >
+                <div class="small-icon">
+                    ℹ️
+                </div>
+
+                <div>
+                    <div class="small-title">
+                        Информация
+                    </div>
+
+                    <div class="small-description">
+                        Как всё работает
+                    </div>
+                </div>
+            </button>
+
+
+            <button
+                    class="small-card"
+                    onclick="showTimeSettings()"
+            >
+                <div class="small-icon">
+                    ⚙️
+                </div>
+
+                <div>
+                    <div class="small-title">
+                        Время
+                    </div>
+
+                    <div class="small-description">
+                        Настроить
+                    </div>
+                </div>
+            </button>
+
+        </div>
+
+
+        <!-- Посетить бота -->
+
+        <button
+                class="bot-button"
+                onclick="openRewardBot()"
+        >
+            <span>🚀</span>
+
+            <span>
+                Перейти в бота
+            </span>
+
+            <span>
+                →
+            </span>
+        </button>
+
+    </main>
+
+
+    <footer>
+
+        <div class="nav-item active">
+            <div>⌂</div>
+            <span>Главная</span>
+        </div>
+
+        <div
+                class="nav-item"
+                onclick="showStreak()"
+        >
+            <div>🔥</div>
+            <span>Серия</span>
+        </div>
+
+        <div
+                class="nav-item"
+                onclick="showInfo()"
+        >
+            <div>ℹ️</div>
+            <span>Инфо</span>
+        </div>
+
+    </footer>
+
+</div>
+
+<script src="/app.js"></script>
+
+</body>
+</html>
